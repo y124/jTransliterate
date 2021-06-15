@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*- 
 #!/usr/bin/python
 
+import os
+
 __author__ = "Ryan McGrath <ryan@venodesigns.net>"
 __version__ = "1.0.3"
 
@@ -19,7 +21,7 @@ import re
 # Kim Ahlström and Ve: https://github.com/Kimtaro/ve/
 #
 # Ve's Transliterators are written in Ruby, and I wanted Python. Consider it a nice port. ;)
-from translation_maps import H_SYLLABIC_N, H_SMALL_TSU, HIRA_TO_LATN, LATN_TO_HIRA
+exec(open(os.path.dirname(os.path.abspath(__file__)) + '/translation_maps.py').read())
 
 def defaultToSelfText(fn):
     """
